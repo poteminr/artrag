@@ -27,7 +27,7 @@ class ArtAssistant:
         context = ""
 
         for doc in docs:
-            context += f"Информация об авторах: {doc.metadata["wiki"]}\n\nСписок картин автора: {doc.metadata["description"]}\n\n"
+            context += f"Информация об авторах: {doc.metadata['wiki']}\n\nСписок картин автора: {doc.metadata['description']}\n\n"
         
         user_prompt = f"Ответь на запрос пользователя: {user_query}\n\nТы можешь использовать эту информацию: {context}"
         system_prompt = "Ты - ассистент, который помогает пользователю отвечать на его вопросы об искусстве. Твой ответ должен быть кратким (несколько предложений), но точным. Ты должен отвечать на русском языке."
